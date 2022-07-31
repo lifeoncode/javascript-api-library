@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+$white: #ffffff;
+$black: #141414;
+$blue: rgb(0, 136, 255);
+
+@mixin grid($columns:1fr, $gap:20px) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+}
+
+@mixin flex($align:center, $justify:center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 1200px) {
+        max-width: 90%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        max-width: 96%;
+    }
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+span {
+    display: inline-block;
+    @extend p;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 0;
+}

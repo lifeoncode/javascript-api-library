@@ -1,0 +1,25 @@
+@import './config';
+
+header {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(45deg, rgb(198, 59, 82), rgb(216, 7, 42), rgb(46, 11, 54));
+
+    .heading {
+        color: $white;
+        font-size: 60px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    .btn {
+        background-color: $white;
+        border-radius: 30px;
+        color: $black;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
