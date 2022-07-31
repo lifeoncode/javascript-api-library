@@ -16,6 +16,7 @@ function fetchData(e) {
 
 // display data fetched
 function displayData(error, response) {
+    window.scrollTo(0, 600);
     let responseOutput = '';
     // output the error if error encountered 
     if (error) {
@@ -43,4 +44,24 @@ function displayData(error, response) {
             output.innerHTML += responseOutput;
         })
     }
+}
+
+
+
+
+// post request form
+const postForm = document.querySelector('#post-request-form');
+const postURL = postForm.querySelector('input');
+
+// make post request on submit
+postForm.addEventListener('submit', postData);
+
+function postData(e) {
+    e.preventDefault();
+    // first gather data to post
+    const request = new httpLib();
+    // make get request to figure out info required for post
+    request.get(postURL.value, function(error, response) {
+        
+    });
 }

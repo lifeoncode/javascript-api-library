@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./scss/style.css">
     <title>JS API LIBRARY</title>
 </head>
@@ -15,31 +16,40 @@
         </div>
     </header>
 
+    <form id="custom-form" class="custom">
+        <h3 class="heading">Fill Post Data</h3>
+        <input type="text" placeholder="Enter user" required>
+        <input type="text" placeholder="Enter id" required>
+        <input type="text" placeholder="Enter title" required>
+        <input type="text" placeholder="Enter body" required>
+        <button type="submit" class="btn">confirm and send</button>
+    </form>
+
     <main>
         <!-- request making -->
         <section class="requests">
             <div class="container">
                 <form id="get-request-form">
                     <h3 class="heading">GET request</h3>
-                    <input type="text" placeholder="Enter api url" required>
+                    <input type="text" placeholder="Enter endpoint url" required>
                     <button type="submit" class="btn">send request</button>
                 </form>
 
                 <form id="post-request-form">
                     <h3 class="heading">POST request</h3>
-                    <input type="text" placeholder="Enter api url" required>
+                    <input type="text" placeholder="Enter endpoint url" required>
                     <button type="submit" class="btn">send request</button>
                 </form>
 
                 <form id="put-request-form">
                     <h3 class="heading">PUT request</h3>
-                    <input type="text" placeholder="Enter api url" required>
+                    <input type="text" placeholder="Enter endpoint url" required>
                     <button type="submit" class="btn">send request</button>
                 </form>
 
                 <form id="delete-request-form">
                     <h3 class="heading">DELETE request</h3>
-                    <input type="text" placeholder="Enter api url" required>
+                    <input type="text" placeholder="Enter endpoint url" required>
                     <button type="submit" class="btn">send request</button>
                 </form>
             </div>
@@ -49,6 +59,7 @@
         <!-- response output -->
         <section class="response">
             <div class="container">
+                <h3 class="heading">Request Output <i class="fas fa-arrow-down-long"></i></h3>
                 <div class="output">
                     
                 </div>
@@ -60,7 +71,7 @@
             <div class="container"></div>
         </section>
     </main>
-    
+
     
 
     <script src="./js/lib.js" defer></script>

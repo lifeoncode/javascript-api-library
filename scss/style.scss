@@ -35,6 +35,78 @@ section {
     background-color: $white;
 }
 
+form {
+    padding: 20px;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.061), -4px -4px 4px #fff;
+
+    &.custom {
+        position: fixed;
+        z-index: 3;
+        top: 20%;
+        left: 35%;
+        width: 30%;
+        margin: 0 auto;
+        box-shadow: 0 0 1000px rgba(0, 0, 0, 0.464);
+        transition: all 0.3s ease;
+        transform: scale(0);
+        opacity: 0;
+
+        .btn {
+            margin-top: 30px;
+        }
+
+        &.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    input, .btn {
+        display: block;
+        width: 100%;
+        outline: none;
+    }
+
+    input {
+        background-color: transparent;
+        font-size: 14px;
+        color: $black;
+        border: 0;
+        border-bottom: 1px solid $light-gray;
+        padding: 10px;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+
+        &:focus {
+            border-color: $black;
+        }
+    }
+
+    .btn {
+        border-radius: 30px;
+        font-size: 12px;
+        background-color: transparent;
+        color: $black;
+        border: 1px solid $light-gray;
+        
+        &:hover {
+            background-color: rgb(232, 43, 75);
+            color: $white;
+            border-color: rgb(232, 43, 75);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }            
+    }
+}
+
 
 .requests {
     padding: 50px 0;
@@ -42,61 +114,21 @@ section {
     .container {
         @include grid($columns:repeat(4, 1fr));
     }
-
-    form {
-        padding: 20px;
-        background-color: $white;
-        border-radius: 10px;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.061), -4px -4px 4px #fff;
-
-        .heading {
-            font-size: 20px;
-        }
-
-        input, .btn {
-            display: block;
-            width: 100%;
-            outline: none;
-        }
-
-        input {
-            background-color: transparent;
-            font-size: 14px;
-            color: $black;
-            border: 0;
-            border-bottom: 1px solid $light-gray;
-            padding: 10px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-
-            &:focus {
-                border-color: $black;
-            }
-        }
-
-        .btn {
-            border-radius: 30px;
-            font-size: 12px;
-            background-color: transparent;
-            color: $black;
-            border: 1px solid $light-gray;
-            
-            &:hover {
-                background-color: rgb(232, 43, 75);
-                color: $white;
-                border-color: rgb(232, 43, 75);
-            }
-
-            &:active {
-                transform: scale(0.95);
-            }            
-        }
-    }
 }
 
 
 .response {
     padding:  50px 0;
+
+    .heading {
+        color: $black;
+        margin-bottom: 30px;
+
+        .fas {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    }
 
     .output {
         background: linear-gradient(45deg, rgb(46, 11, 54), rgb(216, 7, 42), rgb(191, 75, 94));

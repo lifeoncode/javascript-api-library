@@ -5,7 +5,7 @@ function httpLib() {
     this.http = new XMLHttpRequest();
 }
 
-// GET method
+// GET request method
 httpLib.prototype.get = function(url, callback) {
     this.http.open('GET', url, true);
 
@@ -14,6 +14,7 @@ httpLib.prototype.get = function(url, callback) {
     this.http.onload = function() {
         if (self.http.status === 200) {
             // error is Null if status is OK
+            console.log('SUCCESS!!');
             callback(null, self.http.response);
 
         } else {
@@ -21,4 +22,20 @@ httpLib.prototype.get = function(url, callback) {
         }
     }
     this.http.send();
+}
+
+
+// POST request method
+httpLib.prototype.post = function(url, data, callback) {
+    this.http.open('POST', url, true);
+    this.http.setRequestHeader('Content-type', 'application/json');
+
+    const self = this;
+    this.http.onload = function() {
+        console.log('SUCCESS!!');
+        // callback(null, self.http.response);
+        console.log(self.http.response);
+    }
+
+    this.http.send(JSON.stringify(data));
 }
