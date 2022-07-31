@@ -7,6 +7,19 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 30px;
+}
+
+body {
+  background-color: #f9f9fa;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -48,22 +61,89 @@ span {
 }
 
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
   padding: 100px 0;
   text-align: center;
-  background: linear-gradient(45deg, rgb(198, 59, 82), rgb(216, 7, 42), rgb(46, 11, 54));
+  background: linear-gradient(45deg, rgb(191, 75, 94), rgb(216, 7, 42), rgb(46, 11, 54));
 }
 header .heading {
-  color: #ffffff;
+  color: #f9f9fa;
   font-size: 60px;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
 header .btn {
-  background-color: #ffffff;
+  background-color: #f9f9fa;
   border-radius: 30px;
   color: #141414;
 }
 header .btn:hover {
   background-color: rgb(0, 136, 255);
-  color: #ffffff;
+  color: #f9f9fa;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+  background-color: #f9f9fa;
+}
+
+.requests {
+  padding: 50px 0;
+}
+.requests .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.requests form {
+  padding: 20px;
+  background-color: #f9f9fa;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.061), -4px -4px 4px #fff;
+}
+.requests form .heading {
+  font-size: 20px;
+}
+.requests form input, .requests form .btn {
+  display: block;
+  width: 100%;
+  outline: none;
+}
+.requests form input {
+  background-color: transparent;
+  font-size: 14px;
+  color: #141414;
+  border: 0;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.231);
+  padding: 10px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+.requests form input:focus {
+  border-color: #141414;
+}
+.requests form .btn {
+  border-radius: 30px;
+  font-size: 12px;
+  background-color: transparent;
+  color: #141414;
+  border: 1px solid rgba(51, 51, 51, 0.231);
+}
+.requests form .btn:hover {
+  background-color: rgb(232, 43, 75);
+  color: #f9f9fa;
+  border-color: rgb(232, 43, 75);
+}
+.requests form .btn:active {
+  transform: scale(0.95);
+}
+
+.response {
+  padding: 50px 0;
 }/*# sourceMappingURL=style.css.map */

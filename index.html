@@ -16,21 +16,46 @@
     </header>
 
     <main>
-        <section class="get-request">
+        <!-- request making -->
+        <section class="requests">
             <div class="container">
                 <form id="get-request-form">
-                    <h3 class="heading">Make GET request</h3>
+                    <h3 class="heading">GET request</h3>
                     <input type="text" placeholder="Enter api url" required>
-                    <button type="submit">send request</button>
+                    <button type="submit" class="btn">send request</button>
                 </form>
 
+                <form id="post-request-form">
+                    <h3 class="heading">POST request</h3>
+                    <input type="text" placeholder="Enter api url" required>
+                    <button type="submit" class="btn">send request</button>
+                </form>
+
+                <form id="put-request-form">
+                    <h3 class="heading">PUT request</h3>
+                    <input type="text" placeholder="Enter api url" required>
+                    <button type="submit" class="btn">send request</button>
+                </form>
+
+                <form id="delete-request-form">
+                    <h3 class="heading">DELETE request</h3>
+                    <input type="text" placeholder="Enter api url" required>
+                    <button type="submit" class="btn">send request</button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- response output -->
+        <section class="response">
+            <div class="container">
                 <div class="output">
                     
                 </div>
             </div>
         </section>
-
-
+        
+        
         <section id="how-it-works">
             <div class="container"></div>
         </section>

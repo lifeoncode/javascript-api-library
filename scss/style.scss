@@ -1,9 +1,14 @@
 @import './config';
 
 header {
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
     padding: 100px 0;
     text-align: center;
-    background: linear-gradient(45deg, rgb(198, 59, 82), rgb(216, 7, 42), rgb(46, 11, 54));
+    background: linear-gradient(45deg, rgb(191, 75, 94), rgb(216, 7, 42), rgb(46, 11, 54));
 
     .heading {
         color: $white;
@@ -22,4 +27,74 @@ header {
             color: $white;
         }
     }
+}
+
+section {
+    position: relative;
+    z-index: 2;
+    background-color: $white;
+}
+
+
+.requests {
+    padding: 50px 0;
+
+    .container {
+        @include grid($columns:repeat(4, 1fr));
+    }
+
+    form {
+        padding: 20px;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.061), -4px -4px 4px #fff;
+
+        .heading {
+            font-size: 20px;
+        }
+
+        input, .btn {
+            display: block;
+            width: 100%;
+            outline: none;
+        }
+
+        input {
+            background-color: transparent;
+            font-size: 14px;
+            color: $black;
+            border: 0;
+            border-bottom: 1px solid $light-gray;
+            padding: 10px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+
+            &:focus {
+                border-color: $black;
+            }
+        }
+
+        .btn {
+            border-radius: 30px;
+            font-size: 12px;
+            background-color: transparent;
+            color: $black;
+            border: 1px solid $light-gray;
+            
+            &:hover {
+                background-color: rgb(232, 43, 75);
+                color: $white;
+                border-color: rgb(232, 43, 75);
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }            
+        }
+    }
+}
+
+
+.response {
+    padding:  50px 0;
 }
