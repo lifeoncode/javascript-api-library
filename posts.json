@@ -1,0 +1,27 @@
+[
+    {
+        "user": "jake",
+        "title": "This is Jake",
+        "body": "Jake is awesome because jake wrote this article"
+    },
+    {
+        "user": "mason",
+        "title": "This is mason",
+        "body": "Mason is awesome because mason wrote this article"
+    },
+    {
+        "user": "Micheal",
+        "title": "This is Micheal",
+        "body": "Micheal is awesome because Micheal wrote this article"
+    },
+    {
+        "user": "Lucas",
+        "title": "This is Lucas",
+        "body": "Lucas is awesome because Lucas wrote this article"
+    },
+    {
+        "user": "Michelle",
+        "title": "This is Michelle",
+        "body": "Michelle is awesome because Michelle wrote this article"
+    }
+]

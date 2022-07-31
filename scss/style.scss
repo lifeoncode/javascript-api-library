@@ -97,4 +97,18 @@ section {
 
 .response {
     padding:  50px 0;
+
+    .output {
+        background: linear-gradient(45deg, rgb(46, 11, 54), rgb(216, 7, 42), rgb(191, 75, 94));
+        padding: 50px;
+        border-radius: 10px;
+        @include grid($columns:repeat(4, 1fr));
+
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.324);
+            color: $white;
+        }
+    }
 }

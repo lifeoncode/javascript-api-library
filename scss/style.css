@@ -146,4 +146,18 @@ section {
 
 .response {
   padding: 50px 0;
+}
+.response .output {
+  background: linear-gradient(45deg, rgb(46, 11, 54), rgb(216, 7, 42), rgb(191, 75, 94));
+  padding: 50px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.response .output .card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.324);
+  color: #f9f9fa;
 }/*# sourceMappingURL=style.css.map */
