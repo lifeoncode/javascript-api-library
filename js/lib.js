@@ -35,7 +35,8 @@ httpLib.prototype.post = function(url, data, callback) {
         console.log('SUCCESS!!');
         // callback(null, self.http.response);
         console.log(self.http.response);
+        callback(self.http.response);
     }
-
-    this.http.send(JSON.stringify(data));
+x
+    this.http.send(data);
 }
